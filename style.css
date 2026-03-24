@@ -1,0 +1,21 @@
+/* Reset and base styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Container Definition for standard 1440px viewport */
+.desktop-container {
+    width: 1440px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+}
