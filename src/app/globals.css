@@ -44,3 +44,16 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+
+/* Aggressive Hover Fix for Icons */
+.group:hover i.ph-list, 
+.group:hover i.ph-x,
+i.ph-list:hover,
+i.ph-x:hover {
+  color: #b22234 !important;
+  transition: color 0.3s ease;
+}
+
+.ph-list, .ph-x {
+  transition: color 0.3s ease;
+}

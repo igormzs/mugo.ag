@@ -12,7 +12,6 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/assets/hero logo.png"
           className="max-w-[1200px] max-h-[800px] w-auto h-auto object-contain pointer-events-none video-mask"
         >
           <source src="/videos/Mugo-3dlogo-1080p-new.mp4" type="video/mp4" />

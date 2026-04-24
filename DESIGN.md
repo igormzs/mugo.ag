@@ -19,7 +19,7 @@ This document serves as the "Source of Truth" for the Mugô brand identity and d
     - **Hero Headings**: `font-medium`, `text-[84px]`, `leading-[1.25]`.
     - **Subheadings**: `font-semibold`, `text-[32px]`, `leading-[1.5]`.
     - **Body Copy**: `font-normal`, `text-[20px]` or `text-[24px]`.
-    - **Nav Links**: `text-[24px]`, `hover:text-[#b22234]`.
+    - **Nav Links**: `text-[20px]`, `hover:text-[#b22234]`.
 
 ### 3. Layout Constraints
 - **Content Constraint**: All primary content must be wrapped in a container with a `max-width: 1600px`.
@@ -27,16 +27,23 @@ This document serves as the "Source of Truth" for the Mugô brand identity and d
 - **Section Centering**: Sections use `flex items-center justify-center` or similar centering logic to keep content balanced vertically.
 
 ### 4. Component Rules
-- **CTA Buttons**: 
-    - Shape: `rounded-[24px]`.
-    - Padding: `px-[24px] py-[12px]`.
-    - Hover: Transition from brand gold `#c79830` to brand red `#b22234`.
+- **CTA Buttons (Standard)**: 
+    - **Background**: `bg-brand-gold` (`#c79830`).
+    - **Hover**: `bg-brand-red` (`#b22234`) with `transition-colors`.
+    - **Typography**: `font-semibold`, `text-[24px]`, `text-[#f5f5f5]`, `leading-[1.5]`.
+    - **Shape**: `rounded-[24px]` (pill/rounded).
+    - **Padding**: `px-[24px] py-[12px]`.
+    - **Effects**: `shadow-lg`.
 - **Cards**:
     - Radius: `rounded-[32px]`.
     - Effects: Subtle `shadow-lg`, hover transform `-translate-y-2`.
 - **Navbar**: 
     - Height: `96px`.
+    - Link Size: `20px`.
     - Background: `bg-[#E9E9E9]/80` with `backdrop-blur-sm`.
+- **Menu Overlay**:
+    - Mode: Full-screen (`100vw/100vh`).
+    - Logic: `fixed inset-0 z-[100]`, centered via 1600px constraint.
 
 ### 5. Media Handling
 - **Hero Video**: 1080p asset, centered, with a `radial-gradient` mask to blend edges into the section background.

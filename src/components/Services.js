@@ -9,7 +9,7 @@ export default function Services() {
           alt=""
           width={680}
           height={786}
-          className="absolute h-[786px] right-0 opacity-30 top-1/2 -translate-y-1/2 w-auto object-contain pointer-events-none z-0"
+          className="absolute h-[786px] right-0 opacity-30 bottom-0 w-auto object-contain pointer-events-none z-0"
         />
         <div className="content-stretch flex flex-col gap-[48px] items-center justify-center w-[1116px] z-10 py-20">
           <div className="flex items-center justify-center relative shrink-0 w-full mb-[24px]">
