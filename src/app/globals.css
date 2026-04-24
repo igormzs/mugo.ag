@@ -43,6 +43,15 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .content-constraint {
+    padding-left: 47.5px;
+    padding-right: 47.5px;
+  }
 }
 
 /* Aggressive Hover Fix for Icons */

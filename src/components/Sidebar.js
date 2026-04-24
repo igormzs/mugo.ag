@@ -41,10 +41,10 @@ export default function Sidebar({ isOpen, onClose }) {
         }`}
       >
         {/* Content Constraint (1600px Rule) */}
-        <div className="max-w-[1600px] h-full w-full relative px-[47.5px]">
+        <div className="max-w-[1600px] h-full w-full relative px-6 md:px-[47.5px] overflow-y-auto">
           {/* Close Button & Logo */}
-          <div className="h-[96px] w-full flex items-center justify-between border-b-[0.5px] border-[#5b6770]">
-            <div className="h-[52px] flex items-center">
+          <div className="h-[80px] md:h-[96px] w-full flex items-center justify-between border-b-[0.5px] border-[#5b6770] sticky top-0 bg-[#f5f5f5] z-20">
+            <div className="h-[40px] md:h-[52px] flex items-center">
               <Image
                 src="/assets/header logo.png"
                 width={150}
@@ -55,98 +55,96 @@ export default function Sidebar({ isOpen, onClose }) {
             </div>
             <div
               onClick={onClose}
-              className="flex items-center justify-center cursor-pointer w-[35px] h-[35px] hover:scale-110 transition-transform group"
+              className="flex items-center justify-center cursor-pointer w-[40px] h-[40px] md:w-[48px] md:h-[48px] hover:scale-110 transition-transform group bg-gray-100 rounded-full"
             >
-              <i className="ph ph-x text-[35px] text-[#5b6770]"></i>
+              <i className="ph ph-x text-[28px] md:text-[35px] text-[#5b6770]"></i>
             </div>
           </div>
 
-          {/* Menu Sidebar Cards - Layout within 1600px */}
-          <div className="relative mt-[80px] h-[calc(100vh-200px)] w-full">
+          {/* Menu Sidebar Cards - Responsive Grid Layout */}
+          <div className="relative mt-10 md:mt-20 pb-20 w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            
+            {/* I.A. Generativa */}
             <Link
               href="#plataforma"
               onClick={onClose}
-              className="absolute bg-brand-gold flex flex-col justify-between left-0 p-[32px] rounded-[24px] top-0 w-[48%] h-[42%] hover:scale-[1.02] transition-transform shadow-xl"
+              className="bg-brand-gold flex flex-col justify-between p-6 md:p-8 rounded-[24px] aspect-[1.5/1] md:aspect-auto md:h-[300px] hover:scale-[1.02] transition-transform shadow-xl"
             >
               <div className="w-full flex justify-end">
-                <i className="ph-bold ph-plus text-[40px] text-white"></i>
+                <i className="ph-bold ph-plus text-[32px] md:text-[40px] text-white"></i>
               </div>
               <div className="w-full h-full flex items-end justify-start">
-                <p className="font-bold text-[32px] leading-[1.5] text-white">
+                <p className="font-bold text-2xl md:text-[32px] leading-tight text-white">
                   I.A. Generativa
                 </p>
               </div>
             </Link>
 
+            {/* Landing pages group */}
             <Link
               href="#servicos"
               onClick={onClose}
-              className="absolute bg-brand-red flex flex-col justify-between left-0 p-[32px] rounded-[24px] bottom-0 w-[48%] h-[53%] hover:scale-[1.02] transition-transform shadow-xl"
+              className="bg-brand-red flex flex-col justify-between p-6 md:p-8 rounded-[24px] aspect-[1.2/1] md:aspect-auto md:h-full md:row-span-2 hover:scale-[1.02] transition-transform shadow-xl order-3 md:order-none"
             >
               <div className="w-full flex justify-end">
-                <i className="ph-bold ph-plus text-[40px] text-white"></i>
+                <i className="ph-bold ph-plus text-[32px] md:text-[40px] text-white"></i>
               </div>
-              <div className="w-full h-full flex flex-col items-start justify-end leading-tight">
-                <p className="font-bold text-[32px] leading-[1.5] text-white text-left">
-                  Landing page
-                </p>
-                <p className="font-bold text-[32px] leading-[1.5] text-white text-left">
-                  E-commerce
-                </p>
-                <p className="font-bold text-[32px] leading-[1.5] text-white text-left">
-                  Site institucional
-                </p>
+              <div className="w-full h-full flex flex-col items-start justify-end leading-tight gap-1">
+                <p className="font-bold text-2xl md:text-[32px] text-white">Landing page</p>
+                <p className="font-bold text-2xl md:text-[32px] text-white">E-commerce</p>
+                <p className="font-bold text-2xl md:text-[32px] text-white">Site institucional</p>
               </div>
             </Link>
 
-            <div className="absolute right-0 top-0 w-[49%] h-full flex flex-col justify-between">
-              <div className="flex gap-[2%] h-[42%]">
-                <Link
-                  href="#plataforma"
-                  onClick={onClose}
-                  className="bg-brand-red flex flex-col justify-between p-[32px] rounded-[24px] w-[49%] h-full hover:scale-[1.02] transition-transform shadow-xl"
-                >
-                  <div className="w-full flex justify-end">
-                    <i className="ph-bold ph-plus text-[40px] text-white"></i>
-                  </div>
-                  <div className="w-full h-full flex items-end justify-start">
-                    <p className="font-bold text-[32px] leading-[1.5] text-white">
-                      Automação
-                    </p>
-                  </div>
-                </Link>
-
-                <Link
-                  href="#servicos"
-                  onClick={onClose}
-                  className="bg-brand-gold flex flex-col justify-between p-[32px] rounded-[24px] w-[49%] h-full hover:scale-[1.02] transition-transform shadow-xl"
-                >
-                  <div className="w-full flex justify-end">
-                    <i className="ph-bold ph-plus text-[40px] text-white"></i>
-                  </div>
-                  <div className="w-full h-full flex items-end justify-start">
-                    <p className="font-bold text-[32px] leading-[1.5] text-white text-left">
-                      Criação de<br />avatar
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
+            {/* Nested Grid for small cards on desktop, stacked on mobile */}
+            <div className="grid grid-cols-2 gap-4 md:gap-6 md:h-[300px]">
               <Link
-                href="#clientes"
+                href="#plataforma"
                 onClick={onClose}
-                className="bg-brand-blue flex flex-col justify-between p-[32px] rounded-[24px] w-full h-[53%] hover:scale-[1.02] transition-transform shadow-xl"
+                className="bg-brand-red flex flex-col justify-between p-6 rounded-[24px] hover:scale-[1.02] transition-transform shadow-xl aspect-square md:aspect-auto"
               >
                 <div className="w-full flex justify-end">
-                  <i className="ph-bold ph-plus text-[40px] text-white"></i>
+                  <i className="ph-bold ph-plus text-[24px] md:text-[32px] text-white"></i>
                 </div>
                 <div className="w-full h-full flex items-end justify-start">
-                  <p className="font-bold text-[32px] leading-[1.5] text-white">
-                    Consultorias
+                  <p className="font-bold text-xl md:text-2xl leading-tight text-white">
+                    Automação
+                  </p>
+                </div>
+              </Link>
+
+              <Link
+                href="#servicos"
+                onClick={onClose}
+                className="bg-brand-gold flex flex-col justify-between p-6 rounded-[24px] hover:scale-[1.02] transition-transform shadow-xl aspect-square md:aspect-auto"
+              >
+                <div className="w-full flex justify-end">
+                  <i className="ph-bold ph-plus text-[24px] md:text-[32px] text-white"></i>
+                </div>
+                <div className="w-full h-full flex items-end justify-start">
+                  <p className="font-bold text-xl md:text-2xl leading-tight text-white">
+                    Criação de<br />avatar
                   </p>
                 </div>
               </Link>
             </div>
+
+            {/* Consultorias */}
+            <Link
+              href="#clientes"
+              onClick={onClose}
+              className="bg-brand-blue flex flex-col justify-between p-6 md:p-8 rounded-[24px] aspect-[1.5/1] md:aspect-auto md:h-[300px] hover:scale-[1.02] transition-transform shadow-xl"
+            >
+              <div className="w-full flex justify-end">
+                <i className="ph-bold ph-plus text-[32px] md:text-[40px] text-white"></i>
+              </div>
+              <div className="w-full h-full flex items-end justify-start">
+                <p className="font-bold text-2xl md:text-[32px] leading-tight text-white">
+                  Consultorias
+                </p>
+              </div>
+            </Link>
+
           </div>
         </div>
       </div>
