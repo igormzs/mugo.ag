@@ -6,8 +6,8 @@ export default function About() {
       <div className="max-w-[1600px] mx-auto w-full h-full flex flex-col md:flex-row items-center relative px-6 md:px-[47.5px]">
         
         {/* Desktop Vertical Title - Exactly the size of the section */}
-        <div className="hidden md:flex absolute left-[-100px] lg:left-0 top-0 h-full w-[300px] items-center justify-center pointer-events-none">
-          <p className="font-semibold text-brand-red text-[128px] leading-none whitespace-nowrap rotate-90 tracking-tighter uppercase origin-center">
+        <div className="hidden md:flex absolute left-[-120px] lg:left-[-60px] top-0 h-full w-[300px] items-center justify-center pointer-events-none">
+          <p className="font-semibold text-brand-red text-[128px] leading-none whitespace-nowrap rotate-90 tracking-tighter uppercase">
             QUEM SOMOS
           </p>
         </div>
