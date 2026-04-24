@@ -2,18 +2,25 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="sobre-nos" className="bg-[#f5f5f5] page-section flex items-center justify-center overflow-hidden py-16 md:py-20">
-      <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-[47.5px]">
+    <section id="sobre-nos" className="bg-[#f5f5f5] page-section flex items-center justify-center overflow-hidden relative py-16 md:py-0">
+      <div className="max-w-[1600px] mx-auto w-full h-full flex flex-col md:flex-row items-center relative px-6 md:px-[47.5px]">
         
-        {/* Title Container - Vertical Text on Desktop, Horizontal on Mobile */}
-        <div className="w-full md:w-[180px] shrink-0 flex items-center justify-center md:justify-start relative mb-12 md:mb-0">
-          <p className="font-bold text-brand-red text-6xl sm:text-8xl md:text-[128px] leading-none whitespace-nowrap md:-rotate-90 origin-center tracking-tighter uppercase md:ml-[64px]">
+        {/* Desktop Vertical Title - Exactly the size of the section */}
+        <div className="hidden md:flex absolute left-[-100px] lg:left-0 top-0 h-full w-[300px] items-center justify-center pointer-events-none">
+          <p className="font-semibold text-brand-red text-[128px] leading-none whitespace-nowrap rotate-90 tracking-tighter uppercase origin-center">
+            QUEM SOMOS
+          </p>
+        </div>
+
+        {/* Mobile Title - Horizontal */}
+        <div className="md:hidden w-full flex justify-center mb-12">
+          <p className="font-semibold text-brand-red text-6xl sm:text-7xl tracking-tighter uppercase text-center">
             QUEM SOMOS
           </p>
         </div>
         
-        {/* Cards Container */}
-        <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[40px] w-full">
+        {/* Cards Container - Shifted right on desktop to make room for vertical title */}
+        <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[40px] w-full md:ml-[180px] lg:ml-[220px]">
           
           {/* Card 1: Julia (Blue) */}
           <div className="bg-brand-blue flex flex-col gap-6 p-6 md:p-[24px] relative rounded-[40px] w-full max-w-[360px] shadow-2xl hover:-translate-y-2 transition-transform cursor-default">
