@@ -7,8 +7,8 @@ export default function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <footer id="contato" className="bg-brand-blue min-h-screen flex items-center overflow-hidden relative py-16 md:py-0">
-      <div className="max-w-[1600px] mx-auto w-full relative h-full flex flex-col justify-center px-6 md:px-[47.5px] py-12 md:py-20 min-h-screen">
+    <footer id="contato" className="bg-brand-blue page-section flex flex-col justify-center py-16 md:py-0">
+      <div className="max-w-[1600px] mx-auto w-full relative flex flex-col justify-center px-6 md:px-[47.5px] py-12 md:py-20">
         
         {/* Large Watermark Logo */}
         <Image
