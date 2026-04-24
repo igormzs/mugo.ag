@@ -7,7 +7,7 @@ export default function About() {
         
         {/* Desktop Vertical Title - Exactly the size of the section */}
         <div className="hidden md:flex absolute left-[-120px] lg:left-[-60px] top-0 h-full w-[300px] items-center justify-center pointer-events-none">
-          <p className="font-semibold text-brand-red text-[128px] leading-none whitespace-nowrap rotate-90 tracking-tighter uppercase">
+          <p className="font-semibold text-brand-red text-[128px] leading-none whitespace-nowrap -rotate-90 tracking-tighter uppercase">
             QUEM SOMOS
           </p>
         </div>
