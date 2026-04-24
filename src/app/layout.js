@@ -10,6 +10,9 @@ const urbanist = Urbanist({
 export const metadata = {
   title: "Mugô - Website Web",
   description: "Consultoria em I.A., Landing Pages e Automação.",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
   openGraph: {
     title: "Mugô - Website Web",
     description: "Desbloqueando novas possibilidades de crescimento com I.A. e tecnologia.",
