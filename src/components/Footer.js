@@ -7,24 +7,15 @@ export default function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <footer id="contato" className="bg-brand-blue page-section flex flex-col justify-center py-16 md:py-0">
-      <div className="max-w-[1600px] mx-auto w-full relative flex flex-col justify-center px-6 md:px-[47.5px] py-12 md:py-20">
+    <footer id="contato" className="bg-brand-blue page-section relative overflow-hidden p-[40px] flex flex-col">
+      <div className="max-w-[1600px] mx-auto w-full flex-1 flex flex-col justify-center relative z-10">
         
-        {/* Large Watermark Logo */}
-        <Image
-          src="/assets/logo watermark.png"
-          alt=""
-          width={680}
-          height={786}
-          className="absolute h-[400px] md:h-[786px] left-[-76px] opacity-10 bottom-0 w-auto object-contain pointer-events-none"
-        />
-
         {/* Top Background Title */}
-        <p className="absolute font-bold left-6 md:left-[47.5px] top-[10%] opacity-20 text-[#f5f5f5] text-5xl sm:text-7xl md:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter">
+        <p className="absolute font-bold left-0 top-[5%] opacity-20 text-[#f5f5f5] text-5xl sm:text-7xl md:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter">
           FALE COM A GENTE
         </p>
 
-        <div className="flex flex-col md:flex-row items-start justify-between w-full mt-24 md:mt-[120px] z-10 gap-16 md:gap-8">
+        <div className="flex flex-col md:flex-row items-start justify-between w-full mt-24 md:mt-[120px] gap-16 md:gap-8">
           
           {/* Left: Contact Info */}
           <div className="flex flex-col gap-6 md:gap-[32px] items-start text-[#f5f5f5] w-full md:w-auto">
@@ -75,6 +66,15 @@ export default function Footer() {
 
         </div>
       </div>
+
+      {/* Large Watermark Logo - Always Bottom Aligned */}
+      <Image
+        src="/assets/logo watermark.png"
+        alt=""
+        width={680}
+        height={786}
+        className="absolute h-[400px] md:h-[786px] left-[-76px] opacity-10 bottom-0 w-auto object-contain pointer-events-none z-0"
+      />
 
       {/* Modal Overlay */}
       {isModalOpen && (
