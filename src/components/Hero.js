@@ -1,12 +1,18 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <section className="bg-[#E9E9E9] min-h-screen w-full overflow-hidden relative shrink-0 flex items-center justify-center">
       {/* Background Video centered */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden px-4 md:px-0">
+      <div className={`absolute inset-0 z-0 flex items-center justify-center overflow-hidden px-4 md:px-0 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <video
           autoPlay
           muted
@@ -21,8 +27,9 @@ export default function Hero() {
       {/* Content Constraint (1600px) */}
       <div className="max-w-[1600px] mx-auto relative min-h-screen w-full z-10 pointer-events-none px-6 md:px-[47.5px]">
         {/* CTA */}
-        <div className="absolute bg-brand-gold flex items-center justify-center left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[47.5px] px-[24px] py-[12px] rounded-[24px] bottom-[15%] md:bottom-[10%] cursor-pointer hover:bg-brand-red transition-colors z-20 shadow-lg pointer-events-auto group w-[90%] md:w-auto">
-          <p className="font-semibold leading-[1.5] relative shrink-0 text-[#f5f5f5] text-[20px] md:text-[24px] whitespace-nowrap">
+        <div className={`absolute bg-brand-gold flex items-center justify-center left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[47.5px] px-[24px] py-[12px] rounded-[24px] bottom-[15%] md:bottom-[10%] cursor-pointer hover:bg-brand-red transition-all duration-700 delay-500 z-20 shadow-lg pointer-events-auto group w-[90%] md:w-auto
+          ${isLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-90'}`}>
+          <p className="font-semibold leading-[1.5] relative shrink-0 text-[#f5f5f5] text-[20px] md:text-[24px] whitespace-nowrap group-hover:scale-105 transition-transform">
             Faça um diagnóstico
           </p>
         </div>

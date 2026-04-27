@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <head>
         <Script src="https://unpkg.com/@phosphor-icons/web" strategy="beforeInteractive" />
       </head>
-      <body className={`${urbanist.variable} font-sans antialiased`}>
+      <body className={`${urbanist.variable} font-sans antialiased`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

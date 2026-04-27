@@ -3,45 +3,52 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import useReveal from "@/hooks/useReveal";
+
 export default function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [ref, isVisible] = useReveal(0.1);
 
   return (
-    <footer id="contato" className="bg-brand-blue page-section relative overflow-hidden p-[40px] flex flex-col">
+    <footer 
+      ref={ref}
+      id="contato" 
+      className="bg-brand-blue page-section relative overflow-hidden p-[40px] flex flex-col"
+    >
       <div className="max-w-[1600px] mx-auto w-full flex-1 flex flex-col justify-center relative z-10">
         
         {/* Top Background Title */}
-        <p className="absolute font-bold left-0 top-[5%] opacity-20 text-[#f5f5f5] text-5xl sm:text-7xl md:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter">
+        <p className={`absolute font-bold left-0 top-[5%] opacity-20 text-[#f5f5f5] text-[48px] sm:text-7xl md:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter transition-all duration-1000 ${isVisible ? 'opacity-20 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
           FALE COM A GENTE
         </p>
 
         <div className="flex flex-col md:flex-row items-start justify-between w-full mt-24 md:mt-[120px] gap-16 md:gap-8">
           
           {/* Left: Contact Info */}
-          <div className="flex flex-col gap-6 md:gap-[32px] items-start text-[#f5f5f5] w-full md:w-auto">
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:opacity-80 transition-opacity">
-              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue">
+          <div className={`flex flex-col gap-6 md:gap-[32px] items-start text-[#f5f5f5] w-full md:w-auto transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-instagram-logo text-[24px] md:text-[32px]"></i>
               </span>
               @mugo.ag
             </div>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:opacity-80 transition-opacity">
-              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue">
+            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-linkedin-logo text-[24px] md:text-[32px]"></i>
               </span>
               Mugô Ag
             </div>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:opacity-80 transition-opacity">
-              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue">
+            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-whatsapp-logo text-[24px] md:text-[32px]"></i>
               </span>
               (11) 9 7351-0549
             </div>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:opacity-80 transition-opacity">
-              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue">
+            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+              <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-whatsapp-logo text-[24px] md:text-[32px]"></i>
               </span>
               (11) 9 8653-1008
@@ -49,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* Right: Newsletter Info */}
-          <div className="flex flex-col gap-6 md:gap-[24px] items-start text-[#f5f5f5] max-w-full md:max-w-[500px]">
+          <div className={`flex flex-col gap-6 md:gap-[24px] items-start text-[#f5f5f5] max-w-full md:max-w-[500px] transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <p className="font-semibold text-3xl md:text-[42px] leading-tight md:leading-[1.2]">
               Receba insights da Mugô
             </p>
@@ -58,7 +65,7 @@ export default function Footer() {
             </p>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-brand-gold text-[#f5f5f5] px-6 py-3 md:px-[24px] md:py-[12px] rounded-[24px] font-semibold text-xl md:text-[24px] leading-[1.5] hover:bg-brand-red transition-colors shadow-lg mt-4 md:mt-[16px] w-full md:w-auto"
+              className="bg-brand-gold text-[#f5f5f5] px-6 py-3 md:px-[24px] md:py-[12px] rounded-[24px] font-semibold text-xl md:text-[24px] leading-[1.5] hover:bg-brand-red hover:scale-105 active:scale-95 transition-all shadow-lg mt-4 md:mt-[16px] w-full md:w-auto"
             >
               Assinar newsletter
             </button>
@@ -73,7 +80,7 @@ export default function Footer() {
         alt=""
         width={680}
         height={786}
-        className="absolute h-[400px] md:h-[786px] left-[-76px] opacity-10 bottom-0 w-auto object-contain pointer-events-none z-0"
+        className={`absolute h-[400px] md:h-[786px] left-[-76px] opacity-10 bottom-0 w-auto object-contain pointer-events-none z-0 transition-all duration-1000 ${isVisible ? 'opacity-10 translate-y-0' : 'opacity-0 translate-y-20'}`}
       />
 
       {/* Modal Overlay */}
