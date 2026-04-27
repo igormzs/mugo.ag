@@ -26,33 +26,53 @@ export default function Footer() {
           
           {/* Left: Contact Info */}
           <div className={`flex flex-col gap-6 md:gap-[32px] items-start text-[#f5f5f5] w-full md:w-auto transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+            <a 
+              href="https://www.instagram.com/mugo.ag"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group"
+            >
               <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-instagram-logo text-[24px] md:text-[32px]"></i>
               </span>
               @mugo.ag
-            </div>
+            </a>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+            <a 
+              href="https://www.linkedin.com/company/mug%C3%B4-ag/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group"
+            >
               <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-linkedin-logo text-[24px] md:text-[32px]"></i>
               </span>
               Mugô Ag
-            </div>
+            </a>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+            <a 
+              href="https://wa.me/5511973510549?text=Oi%2C%20vim%20pelo%20site%20da%20Mug%C3%B4."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group"
+            >
               <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-whatsapp-logo text-[24px] md:text-[32px]"></i>
               </span>
               (11) 9 7351-0549
-            </div>
+            </a>
             
-            <div className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group">
+            <a 
+              href="https://wa.me/5511986531008?text=Oi%2C%20vim%20pelo%20site%20da%20Mug%C3%B4."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-[16px] md:gap-[20px] items-center text-2xl md:text-[32px] leading-[1.5] font-semibold cursor-pointer hover:translate-x-2 transition-all group"
+            >
               <span className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] bg-[#f5f5f5] rounded-full flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors shadow-lg">
                 <i className="ph ph-whatsapp-logo text-[24px] md:text-[32px]"></i>
               </span>
               (11) 9 8653-1008
-            </div>
+            </a>
           </div>
 
           {/* Right: Newsletter Info */}
