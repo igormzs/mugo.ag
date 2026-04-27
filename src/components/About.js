@@ -45,12 +45,20 @@ export default function About() {
               <div className="flex items-center justify-between w-full">
                 <p className="font-semibold text-[#f5f5f5] text-[22px] leading-[1.5]">Julia Portela</p>
                 <div className="flex gap-[12px]">
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  <a 
+                    href="https://www.linkedin.com/in/juliaportela/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-linkedin-logo text-[28px]"></i>
-                  </div>
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  </a>
+                  <a 
+                    href="mailto:mugo.agencia@gmail.com"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-envelope-simple text-[28px]"></i>
-                  </div>
+                  </a>
                 </div>
               </div>
               <p className="font-normal text-[#f5f5f5] text-[20px] leading-[1.5] opacity-80">Diretora Criativa</p>
@@ -75,12 +83,20 @@ export default function About() {
               <div className="flex items-center justify-between w-full">
                 <p className="font-semibold text-[#f5f5f5] text-[22px] leading-[1.5]">Danilo Portela</p>
                 <div className="flex gap-[12px]">
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  <a 
+                    href="https://www.linkedin.com/in/danilo-portela-52693b34/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-linkedin-logo text-[28px]"></i>
-                  </div>
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  </a>
+                  <a 
+                    href="mailto:mugo.agencia@gmail.com"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-envelope-simple text-[28px]"></i>
-                  </div>
+                  </a>
                 </div>
               </div>
               <p className="font-normal text-[#f5f5f5] text-[20px] leading-[1.5] opacity-80">Especialista em I.A.</p>
@@ -105,12 +121,20 @@ export default function About() {
               <div className="flex items-center justify-between w-full">
                 <p className="font-semibold text-[#f5f5f5] text-[22px] leading-[1.5]">Kleber Williams</p>
                 <div className="flex gap-[12px]">
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  <a 
+                    href="https://www.linkedin.com/in/kleber-willians-29b9915b/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-linkedin-logo text-[28px]"></i>
-                  </div>
-                  <div className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform">
+                  </a>
+                  <a 
+                    href="mailto:mugo.agencia@gmail.com"
+                    className="flex items-center justify-center cursor-pointer text-[#f5f5f5] hover:scale-110 transition-transform"
+                  >
                     <i className="ph ph-envelope-simple text-[28px]"></i>
-                  </div>
+                  </a>
                 </div>
               </div>
               <p className="font-normal text-[#f5f5f5] text-[20px] leading-[1.5] opacity-80">Desenvolvedor de Sistemas</p>
