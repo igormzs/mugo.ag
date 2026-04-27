@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="max-w-[1600px] mx-auto w-full flex-1 flex flex-col justify-center relative z-10">
         
         {/* Top Background Title */}
-        <p className={`absolute font-bold left-0 top-[5%] opacity-20 text-[#f5f5f5] text-[32px] sm:text-[64px] md:text-[120px] lg:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter transition-all duration-1000 ${isVisible ? 'opacity-20 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+        <p className={`absolute font-bold left-0 top-[5%] opacity-20 text-[#f5f5f5] text-[28px] sm:text-[7vw] md:text-[120px] lg:text-[160px] leading-none whitespace-nowrap pointer-events-none uppercase tracking-tighter transition-all duration-1000 ${isVisible ? 'opacity-20 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
           FALE COM A GENTE
         </p>
 
